@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RYNKAI | Premium Anime & Donghua Custom Streetwear Atelier</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Discover RYNKAI, an avant-garde digital customization atelier for premium minimalist anime and Chinese Donghua streetwear. Design heavy cotton t-shirts and hoodies from BTTH, Renegade Immortal, Perfect World, Jujutsu Kaisen, and more with dynamic 6-view previews and free custom souvenirs.">
+  <meta name="keywords" content="Rynkai, Anime Streetwear, Donghua Clothing, Battle Through the Heavens, Perfect World, Renegade Immortal, Jujutsu Kaisen, Custom Hoodie, High-End Anime Apparel">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Floating Premium Navigation Bar -->
+  <header id="main-header">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        rynkai<span>.</span>
+      </a>
+      
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#atelier">Customizer</a></li>
+          <li><a href="#presets">Presets</a></li>
+          <li><a href="#story">Our Story</a></li>
+        </ul>
+      </nav>
+      
+      <div class="nav-actions">
+        <button class="nav-btn" id="btn-cart-trigger" aria-label="Open Shopping Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-count" id="nav-cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Editorial Experience -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="assets/hero_campaign.png" alt="Rynkai Luxury Streetwear Campaign Model">
+    </div>
+    
+    <div class="container hero-content">
+      <span class="hero-subtitle jp-label">ネオ・ミニマリズム // CHAPTER 01</span>
+      <h1 class="hero-title">
+        Aesthetic<br>
+        Atelier <span>for anime fashion</span>
+      </h1>
+      <p class="hero-desc">
+        A premium digital atelier fusing heavy-weight streetwear silhouettes with subtle, elegant vectors inspired by legendary Japanese Anime and Chinese Donghua. Crafted in slow-fashion cycles.
+      </p>
+      
+      <div class="hero-btns">
+        <a href="#atelier" class="btn btn-primary">Start Customizing</a>
+        <a href="#presets" class="btn btn-outline">Explore Presets</a>
+      </div>
+    </div>
+    
+    <div class="scroll-indicator">
+      <span>Scroll to design</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Interactive Customizer Atelier Section -->
+  <section class="atelier-section" id="atelier">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle jp-label">スタジオ・カスタム</span>
+        <h2 class="section-title">Rynkai Studio Atelier</h2>
+      </div>
+      
+      <div class="atelier-grid">
+        
+        <!-- Main Canvas Showcase (Left) -->
+        <div class="atelier-canvas-wrapper">
+          <div class="atelier-canvas-container" id="canvas-container">
+            
+            <!-- Standard Front View Renderer -->
+            <div class="product-render-canvas canvas-view-state active" id="view-front">
+              <!-- Custom colored base silhouette -->
+              <img src="" alt="Apparel Base Silhouette" class="product-silhouette" id="base-render-front">
+              <!-- Custom positioned show artwork printed over top -->
+              <div class="product-artwork-overlay" id="artwork-render-front">
+                <img src="" alt="Anime Graphic Print">
+              </div>
+            </div>
+            
+            <!-- Back View Renderer -->
+            <div class="product-render-canvas canvas-view-state" id="view-back">
+              <img src="" alt="Apparel Base Silhouette Back" class="product-silhouette" id="base-render-back">
+              <div class="product-artwork-overlay" id="artwork-render-back" style="transform: translate(-50%, -45%) scale(0.85); opacity: 0.85;">
+                <img src="" alt="Anime Graphic Print Back">
+              </div>
+            </div>
+            
+            <!-- Close-up Graphic View -->
+            <div class="canvas-view-state" id="view-print-zoom">
+              <img src="" alt="Anime Vector Print High Res Detail" class="view-zoom-print" id="print-zoom-img">
+            </div>
+            
+            <!-- Close-up Fabric View -->
+            <div class="canvas-view-state" id="view-fabric">
+              <img src="assets/fabric_texture.png" alt="Heavy Cotton Fabric Stitch Detail">
+            </div>
+            
+            <!-- Model Mockup View -->
+            <div class="canvas-view-state" id="view-model">
+              <img src="assets/hero_campaign.png" alt="Rynkai Premium Fit Lifestyle View" style="filter: brightness(0.65);">
+              <div style="position: absolute; text-align: center; max-width: 80%; background: rgba(0,0,0,0.6); padding: 1.5rem; border: 1px solid var(--border-glass);">
+                <h4 style="font-family: var(--font-heading); text-transform: uppercase; font-size: 0.9rem; color: var(--accent-gold); margin-bottom: 0.25rem;">Editorial Model Drape</h4>
+                <p style="font-size: 0.75rem; color: var(--text-muted);">Demonstrating a 380 GSM drop-shoulder boxy silhouette fit.</p>
+              </div>
+            </div>
+            
+            <!-- Packaging View -->
+            <div class="canvas-view-state" id="view-box">
+              <img src="assets/rynkai_box.png" alt="Rynkai Minimalist Cardboard Box Packaging">
+            </div>
+            
+          </div>
+          
+          <!-- 6-View Swapping Tabs -->
+          <div class="multiview-tabs">
+            <button class="view-tab-btn active" data-view="front">
+              <i class="fa-solid fa-shirt"></i>
+              <span>01 / Front</span>
+            </button>
+            <button class="view-tab-btn" data-view="back">
+              <i class="fa-solid fa-repeat"></i>
+              <span>02 / Back</span>
+            </button>
+            <button class="view-tab-btn" data-view="print-zoom">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span>03 / Graphic</span>
+            </button>
+            <button class="view-tab-btn" data-view="fabric">
+              <i class="fa-solid fa-maximize"></i>
+              <span>04 / Fabric</span>
+            </button>
+            <button class="view-tab-btn" data-view="model">
+              <i class="fa-solid fa-user"></i>
+              <span>05 / Fit</span>
+            </button>
+            <button class="view-tab-btn" data-view="box">
+              <i class="fa-solid fa-box-open"></i>
+              <span>06 / Box</span>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Customizer Panel Controls (Right) -->
+        <div class="customizer-panel">
+          
+          <!-- Silhouette Choice -->
+          <div class="control-group">
+            <h3 class="control-title">
+              1. Select Silhouette
+              <span class="control-selection-label" id="label-selected-silhouette">Oversized T-Shirt</span>
+            </h3>
+            <div class="silhouette-selectors">
+              <button class="sil-btn active" data-silhouette="oversized-tee">
+                <h4>Oversized Tee</h4>
+                <p>₹599 | Drop shoulder fit</p>
+              </button>
+              <button class="sil-btn" data-silhouette="boxy-tee">
+                <h4>Boxy T-Shirt</h4>
+                <p>₹499 | 240 GSM heavy cotton</p>
+              </button>
+              <button class="sil-btn" data-silhouette="pullover-hoodie">
+                <h4>Heavy Hoodie</h4>
+                <p>₹1,299 | 400 GSM double-hood</p>
+              </button>
+              <button class="sil-btn" data-silhouette="crop-hoodie">
+                <h4>Oversized Hoodie</h4>
+                <p>₹1,199 | Heavy loopback weave</p>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Brand Color Swatch Choice -->
+          <div class="control-group">
+            <h3 class="control-title">
+              2. Choose Premium Fabric Color
+              <span class="control-selection-label" id="label-selected-color">Onyx Black</span>
+            </h3>
+            <div class="color-selectors">
+              <button class="color-swatch active" data-color="onyx" style="--color-val: #0f0f11;" aria-label="Onyx Black"></button>
+              <button class="color-swatch" data-color="sand" style="--color-val: #d2c6b4;" aria-label="Sand Beige"></button>
+              <button class="color-swatch" data-color="alabaster" style="--color-val: #ededeb;" aria-label="Alabaster White"></button>
+              <button class="color-swatch" data-color="crimson" style="--color-val: #5a1d1d;" aria-label="Crimson Red"></button>
+              <button class="color-swatch" data-color="slate" style="--color-val: #3a3f47;" aria-label="Slate Grey"></button>
+            </div>
+          </div>
+          
+          <!-- Show Tabs choice -->
+          <div class="control-group">
+            <h3 class="control-title">
+              3. Select Anime / Donghua Series
+              <span class="control-selection-label" id="label-selected-show">Battle Through The Heavens</span>
+            </h3>
+            <div class="show-selectors" id="show-tabs-container">
+              <!-- Populated dynamically via JS -->
+            </div>
+          </div>
+          
+          <!-- Printed Graphic Styles Choice -->
+          <div class="control-group">
+            <h3 class="control-title">
+              4. Pick Graphic Artwork
+              <span class="control-selection-label" id="label-selected-graphic">Flame Lotus</span>
+            </h3>
+            <div class="prints-selectors" id="prints-options-container">
+              <!-- Populated dynamically via JS -->
+            </div>
+          </div>
+          
+          <!-- Size Selector -->
+          <div class="control-group">
+            <h3 class="control-title">
+              5. Size Selector
+              <span class="control-selection-label" id="label-selected-size">Medium</span>
+            </h3>
+            <div class="size-selectors">
+              <button class="size-btn" data-size="S">S</button>
+              <button class="size-btn active" data-size="M">M</button>
+              <button class="size-btn" data-size="L">L</button>
+              <button class="size-btn" data-size="XL">XL</button>
+              <button class="size-btn" data-size="custom">Custom</button>
+            </div>
+            
+            <!-- Custom Measurements Form -->
+            <div class="custom-size-form" id="custom-size-form">
+              <div class="size-input-field">
+                <label for="input-height">Height (cm)</label>
+                <input type="number" id="input-height" placeholder="e.g. 175" min="100" max="250">
+              </div>
+              <div class="size-input-field">
+                <label for="input-weight">Weight (kg)</label>
+                <input type="number" id="input-weight" placeholder="e.g. 70" min="30" max="200">
+              </div>
+            </div>
+          </div>
+          
+          <!-- Price Calculation & Cart Add action -->
+          <div class="atelier-price-box">
+            <div class="atelier-price-label">
+              <span class="price-title">Atelier Value</span>
+              <span class="price-value" id="customizer-calculated-price">₹599</span>
+            </div>
+            
+            <button class="btn btn-add-atelier" id="btn-add-customizer-to-cart">
+              Add custom design
+            </button>
+          </div>
+          
+          <!-- Dynamic souvenir prompt banner -->
+          <div class="souvenir-banner-hint" id="souvenir-hint-banner">
+            <i class="fa-solid fa-gift"></i>
+            <p>Order includes a **Free Collectible Souvenir**: <strong id="dynamic-souvenir-badge-name">BTTH Flame Keychain</strong> (₹0) automatically added to your cart!</p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Presets Showcase Grid Section -->
+  <section class="catalog-section" id="presets">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle jp-label">プレセット・コレクション</span>
+        <h2 class="section-title">Atelier Preset Concepts</h2>
+      </div>
+      
+      <div class="catalog-grid" id="catalog-presets-grid">
+        <!-- Rendered dynamically via JS for perfect coupling -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Narrative Brand Editorial Section -->
+  <section class="story-section" id="story">
+    <div class="container story-grid">
+      <div class="story-visuals">
+        <div class="story-img-main">
+          <img src="assets/hero_campaign.png" alt="Rynkai Streetwear Craftsmanship">
+        </div>
+        <div class="story-img-sub-grid">
+          <div class="story-img-sub">
+            <img src="assets/fabric_texture.png" alt="Rynkai Close-up Heavy Weave Cotton">
+          </div>
+          <div class="story-img-sub" style="display: flex; align-items: center; justify-content: center; background-color: #0b0b0b; padding: 1.5rem;">
+            <div style="text-align: center;">
+              <span style="font-family: var(--font-heading); font-size: 1.8rem; font-weight: 700; color: var(--accent-gold); display: block;">380</span>
+              <span style="font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.2em;">GSM loopback</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="story-text">
+        <span class="section-subtitle jp-label">工芸と哲学</span>
+        <h2 class="story-title">
+          Slow Fashion <span>meets contemporary anime culture</span>
+        </h2>
+        <div class="story-body">
+          <p>
+            Rynkai was established as an architectural study of graphic fashion. We reject cheap, mass-manufactured prints on polyester fabric, choosing instead to focus on heavy-weight, organic cotton silhouettes paired with curated clean design vectors.
+          </p>
+          <p>
+            Every print is inspired directly by legendary Chinese Donghua sagas and modern Japanese classics—rendered in minimal vector outlines, elegant cyber-typography, and sleek monochromatic sketches. 
+          </p>
+          <p>
+            To honor our community, every purchase dynamically includes a highly curated, heavy metallic free souvenir representing the epic lore of your designed gear. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Slide-out Shopping Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay">
+    <div class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+      
+      <div class="cart-header">
+        <h3 id="cart-title">Your Atelier Bag</h3>
+        <button class="btn-close-cart" id="btn-close-cart" aria-label="Close Cart">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      
+      <!-- Scrollable list of items added -->
+      <div class="cart-body" id="cart-items-container">
+        <!-- Rendered dynamically via stateful controller -->
+      </div>
+      
+      <!-- Real-time billing computation and coupon application -->
+      <div class="cart-footer">
+        
+        <div class="promo-container">
+          <input type="text" placeholder="ENTER ATELIER CODE" class="promo-input" id="promo-code-input">
+          <button class="btn-promo-apply" id="btn-apply-promo">Apply</button>
+        </div>
+        <div class="promo-feedback" id="promo-feedback-box">Code Applied! 10% Discount.</div>
+        
+        <div class="cart-totals">
+          <div class="cart-totals-row">
+            <span>Subtotal</span>
+            <span id="cart-subtotal">₹0</span>
+          </div>
+          <div class="cart-totals-row">
+            <span>Atelier Discount</span>
+            <span id="cart-discount">-₹0</span>
+          </div>
+          <div class="cart-totals-row">
+            <span>Tailored Souvenirs (Free)</span>
+            <span>₹0</span>
+          </div>
+          <div class="cart-totals-row grand-total">
+            <span>Total Value</span>
+            <span id="cart-grand-total">₹0</span>
+          </div>
+        </div>
+        
+        <button class="btn-checkout" id="btn-checkout-trigger">
+          Request bespoke creation
+        </button>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Glassmorphic Newsletter Card Section -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-glass-card">
+        <span class="section-subtitle jp-label">ニュースレター</span>
+        <h2 class="newsletter-title">Subscribe to Chapter 02</h2>
+        <p class="newsletter-desc">
+          Sign up to receive early notifications on limited drop releases, new customizable prints, and exclusive members-only accessories.
+        </p>
+        
+        <form class="newsletter-form" id="newsletter-subscription-form">
+          <input type="email" placeholder="ENTER YOUR EMAIL ADDRESS" class="newsletter-input" required id="newsletter-email-input">
+          <button type="submit" class="btn btn-subscribe">Subscribe</button>
+        </form>
+        
+        <div class="newsletter-success-msg" id="newsletter-success">
+          <i class="fa-solid fa-circle-check"></i> Subscription confirmed. Welcome to Rynkai Atelier.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Premium Minimalist Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h2>rynkai<span>.</span></h2>
+          <p>An avant-garde anime custom apparel atelier designed in slow, premium collections.</p>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Atelier</h4>
+          <ul class="footer-links">
+            <li><a href="#atelier">Customizer Studio</a></li>
+            <li><a href="#presets">Pre-set Collection</a></li>
+            <li><a href="#story">Craftsmanship</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="#">Bespoke Sizing</a></li>
+            <li><a href="#">Shipping & Atelier Delivery</a></li>
+            <li><a href="#">Conscious Sourcing</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Protocol</a></li>
+            <li><a href="#">Atelier Terms of Use</a></li>
+            <li><a href="#">Sustainability Report</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="copyright">
+          &copy; 2026 RYNKAI Atelier. All rights reserved. Fusing slow-fashion craftsmanship with anime heritage.
+        </div>
+        
+        <div class="footer-socials">
+          <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="social-icon" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+          <a href="#" class="social-icon" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Polished Checkout Success Modal -->
+  <div class="success-modal-overlay" id="success-modal-overlay">
+    <div class="success-modal">
+      <div class="success-icon-wrapper">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+      <h3>Order Received</h3>
+      <p>
+        Your bespoke customization specs have been successfully locked into our atelier database. We will begin tailored manufacturing on your selected cotton weave shortly. An order confirmation has been logged.
+      </p>
+      <button class="btn-modal-close" id="btn-close-success-modal">Continue Designing</button>
+    </div>
+  </div>
+
+  <!-- JavaScript Controller -->
+  <script src="js/app.js"></script>
+</body>
+</html>
