@@ -1,2 +1,2 @@
-# Ryncai-Clthing-Brand
-A new Clothing Brand
+# Ryncai-Clothing-Brand
+A New Clothing Brand
